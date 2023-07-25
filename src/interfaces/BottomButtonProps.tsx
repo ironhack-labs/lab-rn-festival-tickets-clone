@@ -1,5 +1,5 @@
-import { PressableProps } from "react-native";
+import { PressableProps, TouchableOpacityProps } from "react-native";
 
-export interface BottomButtonProps extends PressableProps {
+export interface BottomButtonProps extends TouchableOpacityProps {
     title: string,
 }

@@ -1,18 +1,18 @@
 import React from 'react'
 import { BottomButtonProps } from '../interfaces/BottomButtonProps'
-import { Pressable } from 'react-native'
+import { Pressable, TouchableOpacity } from 'react-native'
 import Paragraph from '../typography/Paragraph'
 import { colors } from '../globals/colors'
 import { styles } from '../globals/styles'
 
 const BottomButton = (props: BottomButtonProps) => {
     return (
-        <Pressable
+        <TouchableOpacity
             {...props}
             style={styles.bttomButton}
         >
             <Paragraph bold style={{ color: colors.white }}>{props.title}</Paragraph>
-        </Pressable>
+        </TouchableOpacity>
     )
 }
 
