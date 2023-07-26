@@ -37,6 +37,9 @@ const styles = StyleSheet.create({
   btn: {
     height: 46,
     paddingHorizontal: 20,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   btnText: {
     fontSize: 14,
