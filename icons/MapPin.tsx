@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, {G, Path} from 'react-native-svg';
 
-function SvgComponent(props: any) {
+function MapPin(props: any) {
   return (
     <Svg
       width={16}
@@ -18,4 +18,4 @@ function SvgComponent(props: any) {
   );
 }
 
-export default SvgComponent;
+export default MapPin;
