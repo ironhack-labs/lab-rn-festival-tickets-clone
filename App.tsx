@@ -13,6 +13,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
@@ -25,6 +26,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Heart from './icons/Heart';
+import { CustomHeader } from './src/components/ui/CustomHeader';
+import { Tabs } from './src/components/ui/Tabs';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -60,40 +63,26 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: "#ff9290",
+    flex: 1,
   };
 
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+        backgroundColor={"#ff9290"}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <Heart />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+      <View style={{backgroundColor:"white", flex:1}}>
+        <CustomHeader/>
+        <View style={{flex:1}}>
+          <Tabs/>
         </View>
-      </ScrollView>
+      </View>
+      <TouchableOpacity style={styles.buyButton}>
+        <Text style={styles.buyButtonText}>Buy tickets</Text>
+      </TouchableOpacity>
+      
     </SafeAreaView>
   );
 }
@@ -115,6 +104,17 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  buyButton: {
+    backgroundColor:"#FF5D57",
+    height:65,
+    justifyContent:"center",
+    alignItems:"center"
+  },
+  buyButtonText: {
+    fontSize:20,
+    color:"#FCFCFC",
+    fontWeight:"700"
+  }
 });
 
 export default App;
