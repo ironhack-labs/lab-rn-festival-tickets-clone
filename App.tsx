@@ -29,6 +29,7 @@ import Heart from './icons/Heart';
 import Date from './icons/Date';
 import SvgComponent from './icons/MapPin';
 import Banner from './components/Banner';
+import Tabs from './components/Tabs';
 
 function App(): JSX.Element {
   return (
@@ -36,6 +37,7 @@ function App(): JSX.Element {
       <StatusBar backgroundColor="#FF9190" />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <Banner />
+        <Tabs />
       </ScrollView>
     </SafeAreaView>
   );
