@@ -38,7 +38,6 @@ const Details = props => {
 export default Details;
 
 const styles = StyleSheet.create({
-  container: {},
   containerIcon: {
     width: 32,
     marginTop: 2,

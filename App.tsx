@@ -13,18 +13,9 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
-  useColorScheme,
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import Banner from './components/Banner';
 import Tabs from './components/Tabs';
 import Price from './components/Price';
@@ -44,7 +35,9 @@ function App(): JSX.Element {
         <Tabs />
         <View style={styles.container}>
           <Price value={'300'} />
-          <Title1 title="Binational Vs UTC | Opening 2020 - Date 4" />
+          <View style={styles.title}>
+            <Title1 title="Binational Vs UTC | Opening 2020 - Date 4" />
+          </View>
           <Details
             date="Saturday December 24"
             hour="8:00 pm"
@@ -59,7 +52,9 @@ function App(): JSX.Element {
             thanks to the excellent management of our board of directors.
           </TextP>
         </View>
-        <Image source={require('./images/map.png')} style={styles.map} />
+        <View style={styles.containerMap}>
+          <Image source={require('./images/map.png')} style={styles.map} />
+        </View>
         <View>
           <Events />
         </View>
@@ -72,6 +67,14 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 8,
     paddingHorizontal: 16,
+  },
+  containerMap: {
+    marginTop: 35,
+    marginBottom: 27,
+  },
+  title: {
+    marginTop: 8,
+    marginBottom: 16,
   },
   map: {
     width: '100%',
