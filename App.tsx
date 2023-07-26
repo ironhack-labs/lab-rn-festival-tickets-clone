@@ -30,6 +30,7 @@ import Date from './icons/Date';
 import SvgComponent from './icons/MapPin';
 import Banner from './components/Banner';
 import Tabs from './components/Tabs';
+import Price from './components/Price';
 
 function App(): JSX.Element {
   return (
@@ -38,27 +39,19 @@ function App(): JSX.Element {
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <Banner />
         <Tabs />
+        <View style={styles.container}>
+          <Price value={'300'} />
+
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
+  container: {
     marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+    paddingHorizontal: 16,
   },
 });
 
