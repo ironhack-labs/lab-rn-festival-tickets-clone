@@ -30,6 +30,7 @@ import Tabs from './components/Tabs';
 import Price from './components/Price';
 import {Title1} from './components/Title1';
 import Details from './components/Datails';
+import TextP from './components/TextP';
 
 function App(): JSX.Element {
   return (
@@ -47,7 +48,14 @@ function App(): JSX.Element {
             address="Alberto Gallardo Rimac 2304"
             organizer="Organizer SAC."
           />
+          <TextP>
+            This Friday will be a historic day for our region, and you have to
+            be present. In the duel for date 4 of League 1, against UTC, we will
+            inaugurate the lights of the Guillermo Briceño Rosamedina stadium,
+            thanks to the excellent management of our board of directors.
+          </TextP>
         </View>
+        <Image source={require('./images/map.png')} style={styles.map} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -57,6 +65,9 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 8,
     paddingHorizontal: 16,
+  },
+  map: {
+    width: '100%',
   },
 });
 
