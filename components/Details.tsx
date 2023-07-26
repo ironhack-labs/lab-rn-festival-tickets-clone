@@ -63,13 +63,14 @@ const Details = () => {
           </Text>
         </View>
       </View>
-
-      <Text style={[styles.info, styles.poppinsFont]}>
-        This Friday will be a historic day for our region. and you have to be
-        present. In the duel for date 4 of League 1, against UTC, we will
-        inaugurate the lights of the Guillermo Briceño Rosamedina stadium.
-      </Text>
-      <View>
+      <View style={styles.dateContainer}>
+        <Text style={[styles.info, styles.poppinsFont]}>
+          This Friday will be a historic day for our region. and you have to be
+          present. In the duel for date 4 of League 1, against UTC, we will
+          inaugurate the lights of the Guillermo Briceño Rosamedina stadium.
+        </Text>
+      </View>
+      <View style={styles.dateContainer}>
         <Image
           source={require('../images/map.png')}
           style={styles.mapImage}
@@ -79,8 +80,6 @@ const Details = () => {
     </View>
   );
 };
-
-const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {

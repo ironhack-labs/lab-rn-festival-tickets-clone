@@ -2,7 +2,6 @@ import React from 'react';
 import {View, Text, Image, StyleSheet, FlatList} from 'react-native';
 import HearthIcon from '../icons/Heart';
 
-// Interfaz para describir el tipo de datos de cada elemento en similarEventsData
 interface EventData {
   id: number;
   image: number;
@@ -12,7 +11,6 @@ interface EventData {
 }
 
 const SimilarEvents = () => {
-  // Dummy data for similar events (you can replace this with your actual data)
   const similarEventsData: EventData[] = [
     {
       id: 1,
@@ -49,7 +47,6 @@ const SimilarEvents = () => {
       dateTime: 'Thursday June 11 | 9:00 pm',
       price: '$300',
     },
-    // Add more similar events data here...
   ];
 
   const renderItem = ({item}: {item: EventData}) => (
@@ -121,16 +118,16 @@ const styles = StyleSheet.create({
     height: 400,
     marginRight: 16,
     borderRadius: 20,
-    overflow: 'hidden', // Ensure the border radius is applied correctly
+    overflow: 'hidden',
   },
   imageContainer: {
     flex: 1,
     borderRadius: 10,
-    overflow: 'hidden', // Ensure the border radius is applied correctly
+    overflow: 'hidden', 
   },
   eventImage: {
     width: '100%',
-    height: '100%', // Set the height to 100% of the container height
+    height: '100%',
   },
   eventDetails: {
     flex: 1,
@@ -148,7 +145,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 4, // Agregar margen inferior para separar del contenido anterior
+    marginBottom: 4,
   },
   eventDateTime: {
     fontSize: 12,
@@ -168,7 +165,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 24, // Agregar margen inferior para separar del contenido anterior
+    marginBottom: 24,
   },
   mapIcon: {
     marginLeft: 4,
