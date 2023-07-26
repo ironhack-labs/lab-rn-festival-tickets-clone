@@ -25,7 +25,7 @@ const Details = props => {
       </View>
       <View style={styles.row}>
         <View style={styles.containerIcon}>
-          <Image source={require('../images/Ellipse1.png')} />
+          <Image source={props.imageProfile} />
         </View>
         <View>
           <Text style={[styles.text, styles.textBold]}>{props.organizer}</Text>
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   container: {},
   containerIcon: {
     width: 32,
+    marginTop: 2,
   },
   row: {
     flexDirection: 'row',

@@ -32,6 +32,8 @@ import {Title1} from './components/Title1';
 import Details from './components/Datails';
 import TextP from './components/TextP';
 
+const imageProfile = require('./images/Ellipse1.png');
+
 function App(): JSX.Element {
   return (
     <SafeAreaView>
@@ -47,6 +49,7 @@ function App(): JSX.Element {
             hour="8:00 pm"
             address="Alberto Gallardo Rimac 2304"
             organizer="Organizer SAC."
+            imageProfile={imageProfile}
           />
           <TextP>
             This Friday will be a historic day for our region, and you have to
