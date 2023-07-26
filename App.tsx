@@ -11,6 +11,7 @@ import {Image, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import HeaderTab from './src/components/HeaderTab';
 import {DetailsCard} from './src/components/DetailsCard';
 import BuyButton from './src/components/BuyButton';
+import {EventSlide} from './src/components/EventSlide';
 
 function App(): JSX.Element {
   return (
@@ -21,6 +22,7 @@ function App(): JSX.Element {
         <HeaderTab />
         <DetailsCard />
         <BuyButton />
+        <EventSlide />
       </ScrollView>
     </SafeAreaView>
   );
