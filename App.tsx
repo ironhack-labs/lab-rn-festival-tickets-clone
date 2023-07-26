@@ -28,9 +28,10 @@ import {
 import Banner from './components/Banner';
 import Tabs from './components/Tabs';
 import Price from './components/Price';
-import {Title1} from './components/Title1';
+import {Title1} from './components/Titles';
 import Details from './components/Datails';
 import TextP from './components/TextP';
+import Events from './components/Events';
 
 const imageProfile = require('./images/Ellipse1.png');
 
@@ -59,6 +60,9 @@ function App(): JSX.Element {
           </TextP>
         </View>
         <Image source={require('./images/map.png')} style={styles.map} />
+        <View>
+          <Events />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
