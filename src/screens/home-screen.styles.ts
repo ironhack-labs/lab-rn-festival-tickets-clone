@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {SPACING} from '../themes';
 
 export const homeScreenStyles = StyleSheet.create({
   container: {
@@ -12,5 +13,8 @@ export const homeScreenStyles = StyleSheet.create({
   },
   scrollAreaContainer: {
     paddingBottom: 65,
+  },
+  similarEventsArea: {
+    marginTop: SPACING.container,
   },
 });
