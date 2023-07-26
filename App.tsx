@@ -31,6 +31,7 @@ import SvgComponent from './icons/MapPin';
 import Banner from './components/Banner';
 import Tabs from './components/Tabs';
 import Price from './components/Price';
+import {Title1} from './components/Title1';
 
 function App(): JSX.Element {
   return (
@@ -41,7 +42,7 @@ function App(): JSX.Element {
         <Tabs />
         <View style={styles.container}>
           <Price value={'300'} />
-
+          <Title1 title="Binational Vs UTC | Opening 2020 - Date 4" />
         </View>
       </ScrollView>
     </SafeAreaView>

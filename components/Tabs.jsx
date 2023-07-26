@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     letterSpacing: 0.75,
     fontFamily: 'Poppins',
+    fontWeight: 'bold',
   },
   btnActive: {
     borderBottomWidth: 1.33,
