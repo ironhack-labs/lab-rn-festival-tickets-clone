@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -13,107 +6,97 @@ import {
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
+  Image,
 } from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import Heart from './icons/Heart';
+import BuyButton from './assets/components/BuyButton';
+import SimilarEventsSection from './assets/components/SimilarEventsSection';
+import TabButton from './assets/components/TabButton';
+import EventDetails from './assets/components/MainEvent';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <Heart />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+    <SafeAreaView style={styles.container}>
+      <StatusBar backgroundColor={'#FF9190'} barStyle={'dark-content'} />
+      <ScrollView>
+        <Image
+          source={require('./images/heading.png')}
+          style={styles.headerImage}
+        />
+        <View style={styles.tabContainer}>
+          <TabButton title="Info" active={true} />
+          <TabButton title="Comprar" active={false} />
+        </View>
+        <EventDetails
+          price="$99.99 USD"
+          eventTitle="Tecate Pal Norte"
+          date="July 30, 2023"
+          location="Alberto Gallardo Rimac 2304"
+          organizerImage="https://randomuser.me/api/portraits/women/81.jpg"
+          organizerText="Organizador SAC."
+          description="This Friday will be a historic day for our region, and you have to be present. In the duel for date 4 of League 1, against UTC, we will inaugurate the lights of the Guillermo Briceño Rosamedina stadium, thanks to the excellent management of our board of directors."
+        />
+        <View>
+          <Image source={require('./images/map.png')} style={styles.mapImage} />
+        </View>
+        <View style={styles.detailsContainer}>
+          <Text style={styles.eventTitle}>Similar Events</Text>
+          <SimilarEventsSection />
+          <View style={{paddingBottom: 75}}></View>
         </View>
       </ScrollView>
+      <BuyButton text="Comprar Ahora" />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
   },
-  sectionTitle: {
+  headerImage: {
+    width: '100%',
+    height: 250,
+  },
+  tabContainer: {
+    flexDirection: 'row',
+    paddingVertical: 5,
+    backgroundColor: '#fff',
+    padding: 10,
+  },
+  detailsContainer: {
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: '#fff',
+  },
+  price: {
     fontSize: 24,
-    fontWeight: '600',
+    fontWeight: 'bold',
+    color: '#6ABDA6',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+  eventTitle: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    paddingBottom: 15,
+    paddingTop: 10,
   },
-  highlight: {
-    fontWeight: '700',
+  text: {
+    fontSize: 16,
+    marginBottom: 3,
+    color: '#00000085',
+    fontWeight: '500',
+    textAlign: 'justify',
+  },
+  mapImage: {
+    width: '100%',
+    height: 200,
+    resizeMode: 'cover',
+    marginVertical: 10,
   },
 });
 
