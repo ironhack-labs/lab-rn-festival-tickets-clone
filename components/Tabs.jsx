@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
   },
   btn: {
     height: 46,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
+    marginHorizontal: 16,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins',
   },
   btnActive: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 1.33,
     borderBottomColor: '#6ABDA6',
   },
 });
