@@ -25,13 +25,11 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Heart from './icons/Heart';
-import Date from './icons/Date';
-import SvgComponent from './icons/MapPin';
 import Banner from './components/Banner';
 import Tabs from './components/Tabs';
 import Price from './components/Price';
 import {Title1} from './components/Title1';
+import Details from './components/Datails';
 
 function App(): JSX.Element {
   return (
@@ -43,6 +41,12 @@ function App(): JSX.Element {
         <View style={styles.container}>
           <Price value={'300'} />
           <Title1 title="Binational Vs UTC | Opening 2020 - Date 4" />
+          <Details
+            date="Saturday December 24"
+            hour="8:00 pm"
+            address="Alberto Gallardo Rimac 2304"
+            organizer="Organizer SAC."
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
