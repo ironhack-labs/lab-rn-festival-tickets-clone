@@ -6,114 +6,85 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
+  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
+  TouchableOpacity,
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import Heart from './icons/Heart';
+import Banner from './components/Banner';
+import Tabs from './components/Tabs';
+import Price from './components/Price';
+import {Title1} from './components/Titles';
+import Details from './components/Datails';
+import TextP from './components/TextP';
+import Events from './components/Events';
+import ButtonFloat from './components/ButtonFloat';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+const imageProfile = require('./images/Ellipse1.png');
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <Heart />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+    <SafeAreaView>
+      <StatusBar backgroundColor="#FF9190" />
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
+        <Banner />
+        <Tabs />
+        <View style={styles.container}>
+          <Price value={'300'} />
+          <View style={styles.title}>
+            <Title1 title="Binational Vs UTC | Opening 2020 - Date 4" />
+          </View>
+          <Details
+            date="Saturday December 24"
+            hour="8:00 pm"
+            address="Alberto Gallardo Rimac 2304"
+            organizer="Organizer SAC."
+            imageProfile={imageProfile}
+          />
+          <TextP>
+            This Friday will be a historic day for our region, and you have to
+            be present. In the duel for date 4 of League 1, against UTC, we will
+            inaugurate the lights of the Guillermo Briceño Rosamedina stadium,
+            thanks to the excellent management of our board of directors.
+          </TextP>
         </View>
+        <View style={styles.containerMap}>
+          <Image source={require('./images/map.png')} style={styles.map} />
+        </View>
+        <View>
+          <Events />
+        </View>
+        <View style={styles.space} />
       </ScrollView>
+      <ButtonFloat />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
+  container: {
     marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+    paddingHorizontal: 16,
   },
-  highlight: {
-    fontWeight: '700',
+  containerMap: {
+    marginTop: 35,
+    marginBottom: 27,
+  },
+  title: {
+    marginTop: 8,
+    marginBottom: 16,
+  },
+  map: {
+    width: '100%',
+  },
+  space: {
+    height: 200,
   },
 });
 
