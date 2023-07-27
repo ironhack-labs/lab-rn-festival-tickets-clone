@@ -33,12 +33,16 @@ local.properties
 .cxx/
 *.keystore
 !debug.keystore
+android/gradle/wrapper/gradle-wrapper.properties
+android/gradlew
 
 # node.js
 #
 node_modules/
 npm-debug.log
 yarn-error.log
+yarn.lock
+Gemfile.lock
 
 # fastlane
 #
