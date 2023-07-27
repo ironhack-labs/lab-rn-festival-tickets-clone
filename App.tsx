@@ -6,13 +6,14 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
+  Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
 
@@ -23,6 +24,7 @@ import {Title1} from './components/Titles';
 import Details from './components/Datails';
 import TextP from './components/TextP';
 import Events from './components/Events';
+import ButtonFloat from './components/ButtonFloat';
 
 const imageProfile = require('./images/Ellipse1.png');
 
@@ -59,6 +61,7 @@ function App(): JSX.Element {
           <Events />
         </View>
       </ScrollView>
+      <ButtonFloat />
     </SafeAreaView>
   );
 }
