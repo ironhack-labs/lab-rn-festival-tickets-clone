@@ -1,4 +1,5 @@
 import { ScrollView, View, Text, Image } from 'react-native'
+import SimilarEventsSection from '../SimilarEventsSection'
 import MapPin from '../../icons/MapPin'
 import Date from '../../icons/Date'
 import styles from './styles'
@@ -37,6 +38,7 @@ const DetailsSection = () => {
           thanks to the excellent management of our board of directors.
         </Text>
         <Image source={require('../../images/map.png')} />
+        <SimilarEventsSection />
       </View>
     </ScrollView>
   )
