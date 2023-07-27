@@ -1,0 +1,1 @@
+export {ContainerDetailsEvent} from './ContainerDetailsEvent';
