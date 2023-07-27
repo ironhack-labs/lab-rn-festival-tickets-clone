@@ -40,8 +40,7 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: 14,
     letterSpacing: 0.75,
-    fontFamily: 'Poppins',
-    fontWeight: 'bold',
+    fontFamily: 'Poppins-Bold',
   },
   btnActive: {
     borderBottomWidth: 1.33,

@@ -30,8 +30,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#273431',
     lineHeight: 21,
-    fontFamily: 'Poppins',
-    fontWeight: '600',
+    fontFamily: 'Poppins-Regular',
   },
   rowSpaceBetween: {
     flexDirection: 'row',
@@ -43,6 +42,6 @@ const styles = StyleSheet.create({
   },
   date: {
     fontSize: 12,
-    fontWeight: '400',
+    fontFamily: 'Poppins-Light',
   },
 });

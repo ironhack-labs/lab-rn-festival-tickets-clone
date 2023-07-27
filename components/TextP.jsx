@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 25,
     fontFamily: 'Roboto',
-    fontWeight: '400',
     textAlign: 'justify',
   },
 });

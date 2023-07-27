@@ -13,9 +13,8 @@ export default Price;
 
 const styles = StyleSheet.create({
   textPrice: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Bold',
     color: '#6ABDA6',
     fontSize: 20,
-    fontWeight: '700',
   },
 });

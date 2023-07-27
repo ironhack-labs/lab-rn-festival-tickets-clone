@@ -15,10 +15,9 @@ export const Title3 = props => {
 
 const styles = StyleSheet.create({
   title1: {
-    fontFamily: 'Poppins',
-    fontSize: 24,
+    fontFamily: 'Poppins-Bold',
+    fontSize: 28,
     color: '#333333',
-    fontWeight: '700',
   },
   title2: {
     fontSize: 20,

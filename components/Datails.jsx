@@ -54,10 +54,11 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 14,
+    fontFamily: 'Poppins-Regular',
     color: '#828282',
     marginBottom: 8,
   },
   textBold: {
-    fontWeight: 700,
+    fontFamily: 'Poppins-Bold',
   },
 });

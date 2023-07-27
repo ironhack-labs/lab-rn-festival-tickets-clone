@@ -25,8 +25,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Bold',
     fontSize: 14,
-    fontWeight: '700',
   },
 });
