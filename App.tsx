@@ -60,6 +60,7 @@ function App(): JSX.Element {
         <View>
           <Events />
         </View>
+        <View style={styles.space} />
       </ScrollView>
       <ButtonFloat />
     </SafeAreaView>
@@ -81,6 +82,9 @@ const styles = StyleSheet.create({
   },
   map: {
     width: '100%',
+  },
+  space: {
+    height: 200,
   },
 });
 
