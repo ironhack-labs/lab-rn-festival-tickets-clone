@@ -5,7 +5,6 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import MenuDrawer from './MenuDrawer';
 import Information from '../../screens/information/information';
-import {NavigationContainer} from '@react-navigation/native';
 import FirstPage from '../../screens/firstPage/firstPage';
 
 // interface MenuDrawerRouterProps {
@@ -40,24 +39,22 @@ export const MenuDrawerRoutes = () => {
     //     component={Information}
     //   />
     // </Drawer.Navigator>
-    <NavigationContainer>
-      <Drawer.Navigator
-        drawerContent={props => <MenuDrawer {...(props as any)} />}>
-        <Drawer.Screen
-          name="FirstPage"
-          options={{drawerLabel: 'First page Option', title: 'First Stack'}}
-          component={FirstPage}
-        />
-        <Drawer.Screen
-          name="Information"
-          options={{
-            drawerLabel: 'Information page Option',
-            title: 'First Stack',
-          }}
-          component={Information}
-        />
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <Drawer.Navigator
+      drawerContent={props => <MenuDrawer {...(props as any)} />}>
+      <Drawer.Screen
+        name="FirstPage"
+        options={{drawerLabel: 'First page Option', title: 'First Stack'}}
+        component={FirstPage}
+      />
+      <Drawer.Screen
+        name="Information"
+        options={{
+          drawerLabel: 'Information page Option',
+          title: 'First Stack',
+        }}
+        component={Information}
+      />
+    </Drawer.Navigator>
   );
 };
 
