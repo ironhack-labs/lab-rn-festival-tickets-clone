@@ -1,13 +1,33 @@
-import { HStack } from 'native-base';
+import {HStack} from 'native-base';
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import Date from '../../../icons/Date';
 import SvgComponent from '../../../icons/MapPin';
-import Carousel from '../carousel/carousel';
+import Carousel from '../../components/carousel/carousel';
+// import {useNavigation} from '@react-navigation/native';
 
 const Information = (): JSX.Element => {
+  // const navigation = useNavigation();
   return (
     <ScrollView contentInsetAdjustmentBehavior="automatic">
+      <View style={styles.container}>
+        <TouchableOpacity
+          onPress={
+            () => {}
+
+            // navigation.openDrawer()
+          }
+          style={styles.DrawerButton}>
+          <Text style={styles.ButtonText}>Drawer</Text>
+        </TouchableOpacity>
+      </View>
       <View style={styles.informationContainer}>
         <Text style={styles.price}>$300</Text>
         <Text style={styles.title}>
@@ -106,6 +126,22 @@ const styles = StyleSheet.create({
   map: {
     width: '100%',
     marginBottom: 27,
+  },
+
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  DrawerButton: {
+    backgroundColor: '#000',
+    paddingVertical: 8,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+  },
+  ButtonText: {
+    color: '#fff',
   },
 });
 

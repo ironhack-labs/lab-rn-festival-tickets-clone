@@ -1,14 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import {Button, NativeBaseProvider} from 'native-base';
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
+import 'react-native-gesture-handler';
 import Header from './src/components/header/header';
 import Tabs from './src/components/tabs/tabs';
 

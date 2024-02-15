@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import {Image, SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 
 const Header = (): JSX.Element => {
   return (

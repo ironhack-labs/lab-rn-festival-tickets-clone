@@ -1,6 +1,6 @@
-import { HStack, VStack } from 'native-base';
+import {HStack, VStack} from 'native-base';
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import {ScrollView, StyleSheet, Text} from 'react-native';
 import Card from '../card/card';
 
 const Carousel = (): JSX.Element => {

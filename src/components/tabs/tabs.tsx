@@ -1,6 +1,7 @@
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import React from 'react';
-import Information from '../information/information';
+import Information from '../../screens/information/information';
+import FirstScreen from '../../screens/firstPage/firstPage';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -10,7 +11,7 @@ const Tabs = (): JSX.Element => {
       screenOptions={{
         tabBarStyle: {
           backgroundColor: '#ffffff',
-          width: 150,
+          width: '100%',
           shadowColor: '#ffffff',
         },
         tabBarLabelStyle: {
@@ -30,11 +31,10 @@ const Tabs = (): JSX.Element => {
         tabBarActiveTintColor: '#6ABDA6',
         tabBarInactiveTintColor: '#000000B3',
       }}
-      style={{
-        backgroundColor: '#ffffff',
-      }}>
+      style={{backgroundColor: '#ffffff'}}>
       <Tab.Screen name="Info" component={Information} />
       <Tab.Screen name="Prices" component={Information} />
+      <Tab.Screen name="FirstPage" component={FirstScreen} />
     </Tab.Navigator>
   );
 };
